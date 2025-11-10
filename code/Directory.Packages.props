@@ -1,0 +1,13 @@
+<Project>
+  <PropertyGroup>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+    <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageVersion Include="JetBrains.Annotations" Version="2025.2.2"/>
+    <PackageVersion Include="NATS.Client.Core" Version="2.6.11"/>
+    <PackageVersion Include="NATS.Client.KeyValueStore" Version="2.6.11"/>
+    <PackageVersion Include="NATS.Client.ObjectStore" Version="2.6.11"/>
+    <PackageVersion Include="Testcontainers" Version="4.8.1"/>
+  </ItemGroup>
+</Project>
