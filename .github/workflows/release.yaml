@@ -42,9 +42,9 @@ jobs:
       - name: Set VERSION variable from tag
         run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_ENV
       - name: Build sources
-        run: dotnet build code/solutions/Eshva.Testing.OutOfProcessDeployments.Nats.csproj --configuration Release
+        run: dotnet build code/solutions/Eshva.Testing.OutOfProcessDeployments.Nats/Eshva.Testing.OutOfProcessDeployments.Nats.csproj --configuration Release
       - name: Pack the NuGet-package
-        run: dotnet pack code/solutions/Eshva.Testing.OutOfProcessDeployments.Nats.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
+        run: dotnet pack code/solutions/Eshva.Testing.OutOfProcessDeployments.Nats/Eshva.Testing.OutOfProcessDeployments.Nats.csproj --configuration Release /p:Version=${VERSION} --no-build --output .
       - name: NuGet login (OIDC → temp API key)
         uses: NuGet/login@v1
         id: login
